@@ -1,0 +1,21 @@
+{% extends "myapp/base.html" %}
+
+{% block title %}
+    Group Management
+{% endblock title %}
+
+{% block content %}
+<div class="col-md-12">
+    {% if all_groups %}
+        <ul>
+            {% for group in all_groups  %}
+                <li>
+                    <a href="{% url 'myapp:group-detail' group.id %}">{{ group.group_name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h3>No Group</h3>
+    {% endif %}
+</div>
+{% endblock  %}

@@ -1,0 +1,16 @@
+{% extends "myapp/base.html" %}
+{% block content %}
+<div class="col-md-12">
+    <ul>
+        <li>
+            <a href="{% url 'myapp:user-index' %}">User Manage</a>
+        </li>
+        <li>
+            <a href="{% url 'myapp:role-index' %}">Role Manage</a>
+        </li>
+        <li>
+            <a href="{% url 'myapp:group-index' %}">Group Manage</a>
+        </li>
+    </ul>
+</div>
+{% endblock  %}

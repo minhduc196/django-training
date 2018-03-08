@@ -1,0 +1,10 @@
+{% extends "myapp/base.html" %}
+{% block title %}
+    Group Details
+{% endblock title %}
+{% block content %}
+<div class="col-md-12">
+    <h3>{{ group.group_name }}</h3>
+    <p>{{ group.group_desc }}</p>
+</div>
+{% endblock  %}

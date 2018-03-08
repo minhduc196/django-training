@@ -1,0 +1,10 @@
+{% extends "myapp/base.html" %}
+{% block title %}
+    Role Detail
+{% endblock title %}
+{% block content %}
+<div class="col-md-12">
+    <h3>{{ role.role_name }}</h3>
+    <p>{{ role.role_desc }}</p>
+</div>
+{% endblock  %}

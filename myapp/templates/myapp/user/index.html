@@ -1,0 +1,20 @@
+{% extends "myapp/base.html" %}
+
+{% block title %}
+    List of All User
+{% endblock  %}
+{% block content %}
+<div class="col-md-12">
+    {% if all_users %}
+        <ul>
+            {% for user in all_users  %}
+                <li>
+                    <a href="{% url 'myapp:user-detail' user.id %}">{{ user.fullname }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h3>No User</h3>
+    {% endif %}
+</div>
+{% endblock  %}
